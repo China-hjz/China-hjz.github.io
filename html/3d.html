@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft-like Game</title>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplex-noise@2.4.0/simplex-noise.min.js"></script>
+    <script>
+        // 创建场景、相机和渲染器
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // 视角移动控制
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        // 创建一个简单的地形
+        const terrainSize = 16;
+        const terrainHeight = 16;
+        const terrainDepth = 16;
+        const terrainGeometry = new THREE.PlaneGeometry(terrainSize, terrainDepth, terrainHeight - 1, terrainDepth - 1);
+        const terrainMaterial = new THREE.MeshBasicMaterial({ color: 0x8B4513, wireframe: true });
+        const terrain = new THREE.Mesh(terrainGeometry, terrainMaterial);
+        terrain.rotation.x = -Math.PI / 2;
+        scene.add(terrain);
+
+        // 使用Simplex噪声生成地形高度
+        const simplex = new SimplexNoise();
+        for (let i = 0; i < terrainHeight; i++) {
+            for (let j = 0; j < terrainDepth; j++) {
+                const height = simplex.noise2D(i / 10, j / 10) * 5;
+                terrainGeometry.vertices[i * terrainDepth + j].z = height;
+            }
+        }
+        terrainGeometry.verticesNeedUpdate = true;
+
+        // 设置相机位置
+        camera.position.set(terrainSize / 2, 10, terrainDepth / 2);
+        controls.target.set(terrainSize / 2, 0, terrainDepth / 2);
+
+        // 动画函数
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // 窗口大小改变时调整渲染器大小
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
