@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://China-hjz.github.io/posts/21039.html"/>
+  <link rel="canonical" href="https://China-hjz.github.io/posts/57123.html"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,20 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>建站日 - HJZhao</title>
-  <meta name="keywords" content="null">
+  <title>线段树笔记 - HJZhao</title>
+  <meta name="keywords" content="线段树,null">
   <meta desc name="description" content="HJZhao's Blog - HJZhao - HJZhao">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站日">
-<meta property="og:url" content="https://china-hjz.github.io/posts/21039.html">
+<meta property="og:title" content="线段树笔记">
+<meta property="og:url" content="https://china-hjz.github.io/posts/57123.html">
 <meta property="og:site_name" content="HJZhao">
-<meta property="og:description" content="历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开">
+<meta property="og:description" content="线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。   既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。   一个最基本的的线段树会包含以下几个函数👇    build() ———— 用于建树    modify() ——— 用于修改单点元素   query() ——">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-01-01T08:46:00.000Z">
-<meta property="article:modified_time" content="2025-01-01T09:01:51.224Z">
+<meta property="article:published_time" content="2025-01-04T06:07:00.000Z">
+<meta property="article:modified_time" content="2025-01-04T06:09:03.220Z">
 <meta property="article:author" content="HJZhao">
+<meta property="article:tag" content="线段树">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2414,7 +2415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/21039.html">
+  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/57123.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="HJZhao">
   </span>
@@ -2435,7 +2436,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        建站日
+        线段树笔记
       </h1>
       <div class='new-meta-box'>
         
@@ -2452,14 +2453,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/">算法笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">算法笔记</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-01T16:46:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-04T14:07:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 1, 2025</p>
+    <p>发布于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2482,7 +2493,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开</p>
+    <p><a target="_blank" rel="noopener" href="https://oi-wiki.org/ds/seg/">线段树</a> 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。  </p>
+<p>既然是分治，那么，一个递归操作就包含<code>结束条件</code>、<code>分别递归</code>和<code>合并处理</code>三个部分。  </p>
+<p>一个<strong>最基本的</strong>的线段树会包含以下几个函数👇  </p>
+<ol>
+<li>build() ———— 用于建树   </li>
+<li>modify() ——— 用于修改单点元素  </li>
+<li>query() ——— 用于咨询区间元素</li>
+</ol>
+<p>而且，<code>tree[x]</code>一般表示为x节点的区间值（比如区间最大值，区间和之类的），并不需要存储区间开头或结尾。  </p>
+<p>除此之外，还有区间修改，一般常用的有<code>懒惰标记</code>和<code>标记永久化</code>两个方法。<code>懒惰标记</code>的方法实现需要一个<strong>额外</strong>的<code>lazy</code>数组，用来标记操作。与单点修改不同的是，<code>懒惰标记</code>不需要递归到底层，只需要在包含的修改区间标记一下，如果别的操作遍历过这个节点，再<strong>顺便</strong>把标记应用到子节点（一般为push_down()函数）。<code>懒惰标记</code>的核心思想是：不使用就不会应用（到子节点）<del>真懒</del>。大大减少了时间复杂度，一般最坏时间复杂度为O(log n) 。<del>可能吧</del></p>
+<p>线段树用于解决区间问题，比如区间最大值，区间和之类的，还有 <a target="_blank" rel="noopener" href="https://oiwiki.com/topic/rmq/">RMQ</a> 问题。</p>
+<p>不说了，上代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="comment">//#define max(a,b) (a&gt;b?a:b)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//struct linetree</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="type">int</span> a[<span class="number">1000000</span>],t[<span class="number">1000000</span>],lazy[<span class="number">1000000</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		t[x]=a[l]; </span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">build</span>(l,mid,x*<span class="number">2</span>);</span><br><span class="line">	<span class="built_in">build</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span><span class="number">+1</span>],t[x*<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_down</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//	t[x]+=lazy[x];</span></span><br><span class="line">	lazy[x*<span class="number">2</span>]+=lazy[x];</span><br><span class="line">	t[x*<span class="number">2</span>]+=lazy[x];</span><br><span class="line">	lazy[x*<span class="number">2</span><span class="number">+1</span>]+=lazy[x];</span><br><span class="line">	t[x*<span class="number">2</span><span class="number">+1</span>]+=lazy[x];</span><br><span class="line">	lazy[x]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> L, <span class="type">int</span> R)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="keyword">if</span> (l &gt; R || r &lt; L) <span class="keyword">return</span> <span class="number">-0x7fffffff</span>;</span><br><span class="line"><span class="comment">//	if (l == r) return t[x];</span></span><br><span class="line">	<span class="keyword">if</span> (L &lt;= l &amp;&amp; r &lt;= R) <span class="keyword">return</span> t[x];</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>,ans=<span class="number">-2000000000</span>;</span><br><span class="line">	</span><br><span class="line">	ans=<span class="built_in">max</span>(ans,<span class="built_in">query</span>(l,mid,x*<span class="number">2</span>,L,R));</span><br><span class="line">	ans=<span class="built_in">max</span>(ans,<span class="built_in">query</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,L,R));</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> T, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r) </span><br><span class="line">	&#123;</span><br><span class="line">		a[T]=v;</span><br><span class="line">		t[x]=v;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="keyword">if</span> (T &lt;= mid) <span class="built_in">modify</span>(l,mid,x*<span class="number">2</span>,T,v);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">modify</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,T,v);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span><span class="number">+1</span>],t[x*<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modifymax</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l &gt;= L &amp;&amp; r &lt;= R)</span><br><span class="line">	&#123;</span><br><span class="line">		lazy[x]+=value;</span><br><span class="line">		t[x]+=value;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//	if (l &gt; R || r &lt; L) return;</span></span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (L &lt;= mid)<span class="built_in">modifymax</span>(l,mid,x*<span class="number">2</span>,L,R,value);</span><br><span class="line">	<span class="keyword">if</span> (R &gt; mid) <span class="built_in">modifymax</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,L,R,value);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span>],t[x*<span class="number">2</span><span class="number">+1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//&#125;;</span></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n,m,x,y,z;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i) <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;a[i]);</span><br><span class="line">	<span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; m ; ++i) </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;x);</span><br><span class="line">		<span class="keyword">if</span> (x == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">			<span class="built_in">modifymax</span>(<span class="number">1</span>,n,<span class="number">1</span>,x,y,z);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;x,&amp;y);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">query</span>(<span class="number">1</span>,n,<span class="number">1</span>,x,y));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><p>一些GMOJ上的例题：  </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1380">【线段树】最大值（新版）</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547063">代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1379">【线段树】最大值</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/546768">代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/2262">维护序列（seq）</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547521">代码</a></li>
+</ul>
 
   </div>
   
@@ -2507,10 +2537,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-01T17:01:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-04T14:09:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 1, 2025</p>
+    <p>更新于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2518,6 +2548,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>线段树</p></a></div>
+  <span hidden itemprop="keywords">线段树</span>
+
 
         
       
@@ -2529,7 +2563,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/57123.html&title=线段树笔记 - HJZhao&summary="
           
           >
           
@@ -2541,7 +2575,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/57123.html&title=线段树笔记 - HJZhao&summary="
           
           >
           
@@ -2553,7 +2587,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/57123.html&title=线段树笔记 - HJZhao&summary="
           
           >
           
@@ -2586,12 +2620,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/42212.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>归并排序</p>
+        <a class='prev' href='/posts/28477.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>NOI2001 食物链题解（种类并查集）</p>
+          <p class='content'>题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373  
+大意有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多...</p>
+        </a>
+      
+      
+        <a class='next' href='/posts/42212.html'>
+          <p class='title'>归并排序<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
 好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort...</p>
         </a>
-      
       
     </div>
   
@@ -2606,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/posts/21039.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/57123.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2638,9 +2678,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3208,7 +3258,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/21039.html","name":"建站日"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"建站日","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/21039.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/21039.html","wordCount":0,"datePublished":"2025-01-01T08:46:00.000Z","dateModified":"2025-01-01T09:01:51.224Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":2,"item":{"@id":"https://China-hjz.github.io/categories/算法笔记/","name":"算法笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/57123.html","name":"线段树笔记"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"线段树笔记","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/57123.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/57123.html","wordCount":0,"datePublished":"2025-01-04T06:07:00.000Z","dateModified":"2025-01-04T06:09:03.220Z","articleSection":"算法笔记","keywords":"线段树","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

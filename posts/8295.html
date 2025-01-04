@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://China-hjz.github.io/posts/21039.html"/>
+  <link rel="canonical" href="https://China-hjz.github.io/posts/8295.html"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,20 +34,22 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>建站日 - HJZhao</title>
-  <meta name="keywords" content="null">
+  <title>P9943 [USACO21FEB] Year of the Cow B 题解 - HJZhao</title>
+  <meta name="keywords" content="模拟,BFS,null">
   <meta desc name="description" content="HJZhao's Blog - HJZhao - HJZhao">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站日">
-<meta property="og:url" content="https://china-hjz.github.io/posts/21039.html">
+<meta property="og:title" content="P9943 [USACO21FEB] Year of the Cow B 题解">
+<meta property="og:url" content="https://china-hjz.github.io/posts/8295.html">
 <meta property="og:site_name" content="HJZhao">
-<meta property="og:description" content="历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开">
+<meta property="og:description" content="传送门：  洛谷 GMOJ  大意给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。 解法先把每头牛的年龄相差算出来，再用类似宽搜的办法算出即可 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-01-01T08:46:00.000Z">
-<meta property="article:modified_time" content="2025-01-01T09:01:51.224Z">
+<meta property="article:published_time" content="2025-01-04T06:32:00.000Z">
+<meta property="article:modified_time" content="2025-01-04T06:35:36.913Z">
 <meta property="article:author" content="HJZhao">
+<meta property="article:tag" content="模拟">
+<meta property="article:tag" content="BFS">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2414,7 +2416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/21039.html">
+  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/8295.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="HJZhao">
   </span>
@@ -2435,7 +2437,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        建站日
+        P9943 [USACO21FEB] Year of the Cow B 题解
       </h1>
       <div class='new-meta-box'>
         
@@ -2452,14 +2454,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url"><span itemprop="name">题解</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-01T16:46:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-04T14:32:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 1, 2025</p>
+    <p>发布于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2482,7 +2494,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开</p>
+    <p>传送门：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9943">洛谷</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/2545">GMOJ</a></li>
+</ul>
+<h3 id="大意"><a href="#大意" class="headerlink" title="大意"></a>大意</h3><p>给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。</p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>先把每头牛的年龄相差算出来，再用类似宽搜的办法算出即可</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,cnt=<span class="number">1</span>,b[<span class="number">105</span>][<span class="number">105</span>],w[<span class="number">105</span>],a[<span class="number">105</span>][<span class="number">105</span>],vis[<span class="number">105</span>];</span><br><span class="line">map&lt;string,<span class="type">int</span>&gt; mp;</span><br><span class="line">queue&lt;pair&lt;<span class="type">int</span>,<span class="type">int</span>&gt;&gt; q;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	string c1,_,__,t,year,___,____,c2;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	mp[<span class="string">&quot;Bessie&quot;</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; c1 &gt;&gt; _ &gt;&gt; __ &gt;&gt; t &gt;&gt; year &gt;&gt;___ &gt;&gt; ____ &gt;&gt; c2;</span><br><span class="line">		mp[c1]=++cnt;</span><br><span class="line">		<span class="keyword">if</span> (t==<span class="string">&quot;next&quot;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			b[mp[c2]][cnt]=<span class="number">0</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			b[mp[c2]][cnt]=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="type">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">switch</span> (year[<span class="number">0</span>])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;O&#x27;</span>: tmp=<span class="number">1</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;T&#x27;</span>: tmp=<span class="number">2</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;R&#x27;</span>: 	<span class="keyword">if</span> (year[<span class="number">2</span>]==<span class="string">&#x27;b&#x27;</span>) tmp=<span class="number">3</span>;</span><br><span class="line">						<span class="keyword">else</span> <span class="keyword">if</span> (year[<span class="number">2</span>]==<span class="string">&#x27;o&#x27;</span>) tmp=<span class="number">9</span>;</span><br><span class="line">						<span class="keyword">else</span> <span class="keyword">if</span> (year[<span class="number">2</span>]==<span class="string">&#x27;t&#x27;</span>) tmp=<span class="number">12</span>;</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;D&#x27;</span>:  	<span class="keyword">if</span> (year[<span class="number">1</span>]==<span class="string">&#x27;r&#x27;</span>) tmp=<span class="number">4</span>;</span><br><span class="line">						<span class="keyword">else</span> <span class="keyword">if</span> (year[<span class="number">1</span>]==<span class="string">&#x27;o&#x27;</span>) tmp=<span class="number">10</span>;</span><br><span class="line">						<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;S&#x27;</span>: tmp=<span class="number">5</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;H&#x27;</span>: tmp=<span class="number">6</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;G&#x27;</span>: tmp=<span class="number">7</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;M&#x27;</span>: tmp=<span class="number">8</span>; <span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="string">&#x27;P&#x27;</span>: tmp=<span class="number">11</span>;<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		a[mp[c2]][cnt]=tmp; </span><br><span class="line">	&#125;</span><br><span class="line">	q.<span class="built_in">push</span>(&#123;<span class="number">1</span>,<span class="number">1</span>&#125;);</span><br><span class="line">	w[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> target=mp[<span class="string">&quot;Elsie&quot;</span>];</span><br><span class="line">	<span class="keyword">while</span> (q.<span class="built_in">size</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> x=q.<span class="built_in">front</span>().first, y=q.<span class="built_in">front</span>().second;</span><br><span class="line">		q.<span class="built_in">pop</span>();</span><br><span class="line">		<span class="keyword">if</span> (x==target) <span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">if</span> (vis[x]) <span class="keyword">continue</span>;</span><br><span class="line">		vis[x]=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= cnt ; ++i)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[x][i]!=<span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (b[x][i])</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (a[x][i]==y) w[i]=w[x]<span class="number">-12</span>;</span><br><span class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (a[x][i]&gt;y) w[i]=w[x]-(<span class="number">12</span>-(a[x][i]-y));</span><br><span class="line">					<span class="keyword">else</span> w[i]=w[x]-(y-a[x][i]);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					<span class="keyword">if</span> (a[x][i]==y) w[i]=w[x]<span class="number">+12</span>;</span><br><span class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (a[x][i]&lt;y) w[i]=w[x]+(<span class="number">12</span>-(y-a[x][i]));</span><br><span class="line">					<span class="keyword">else</span> w[i]=w[x]+(a[x][i]-y); </span><br><span class="line">				&#125;</span><br><span class="line">				q.<span class="built_in">push</span>(&#123;i,a[x][i]&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">abs</span>(w[target]) &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>神奇的模拟~~</p>
 
   </div>
   
@@ -2507,10 +2528,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-01T17:01:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-04T14:35:36+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 1, 2025</p>
+    <p>更新于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2518,6 +2539,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A8%A1%E6%8B%9F/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>模拟</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/BFS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>BFS</p></a></div>
+  <span hidden itemprop="keywords">模拟 BFS</span>
+
 
         
       
@@ -2529,7 +2554,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/8295.html&title=P9943 [USACO21FEB] Year of the Cow B 题解 - HJZhao&summary="
           
           >
           
@@ -2541,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/8295.html&title=P9943 [USACO21FEB] Year of the Cow B 题解 - HJZhao&summary="
           
           >
           
@@ -2553,7 +2578,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/8295.html&title=P9943 [USACO21FEB] Year of the Cow B 题解 - HJZhao&summary="
           
           >
           
@@ -2586,12 +2611,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/42212.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>归并排序</p>
-          <p class='content'>归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
-好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort...</p>
+        <a class='prev' href='/posts/24646.html'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>P7411 [USACO21FEB] Comfortable Cows S 题解</p>
+          <p class='content'>GMOJ洛谷
+大意有一个矩阵 $T$， Farmer John 每轮会往 $T$ 矩阵中放一个牛，如果这牛旁边恰好有3头牛，则称这个牛是「舒适的」，求每轮 $T$ 矩阵中有多少个牛是「舒适的」。...</p>
         </a>
       
+      
+        <a class='next' href='/posts/28477.html'>
+          <p class='title'>NOI2001 食物链题解（种类并查集）<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373  
+大意有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多...</p>
+        </a>
       
     </div>
   
@@ -2606,7 +2637,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/posts/21039.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/8295.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2638,9 +2669,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E6%84%8F"><span class="toc-text">大意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95"><span class="toc-text">解法</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3208,7 +3249,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/21039.html","name":"建站日"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"建站日","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/21039.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/21039.html","wordCount":0,"datePublished":"2025-01-01T08:46:00.000Z","dateModified":"2025-01-01T09:01:51.224Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":2,"item":{"@id":"https://China-hjz.github.io/categories/题解/","name":"题解"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/8295.html","name":"P9943 [USACO21FEB] Year of the Cow B 题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"P9943 [USACO21FEB] Year of the Cow B 题解","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/8295.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/8295.html","wordCount":0,"datePublished":"2025-01-04T06:32:00.000Z","dateModified":"2025-01-04T06:35:36.913Z","articleSection":"题解","keywords":"模拟,BFS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

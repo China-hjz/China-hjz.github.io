@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://China-hjz.github.io/posts/21039.html"/>
+  <link rel="canonical" href="https://China-hjz.github.io/posts/59463.html"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,20 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>建站日 - HJZhao</title>
-  <meta name="keywords" content="null">
+  <title>P9942 [USACO21JAN] Just Stalling B 题解 - HJZhao</title>
+  <meta name="keywords" content="贪心,null">
   <meta desc name="description" content="HJZhao's Blog - HJZhao - HJZhao">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站日">
-<meta property="og:url" content="https://china-hjz.github.io/posts/21039.html">
+<meta property="og:title" content="P9942 [USACO21JAN] Just Stalling B 题解">
+<meta property="og:url" content="https://china-hjz.github.io/posts/59463.html">
 <meta property="og:site_name" content="HJZhao">
-<meta property="og:description" content="历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开">
+<meta property="og:description" content="GMOJ洛谷 大意$FJ$ 有 $N$ 头奶牛，给你第 $i$ 头奶牛的高度，现在要把它们安排到 $N$ 个牛棚中，每个牛棚有高度限制，高度大于这个限制的奶牛不能被安排到这个牛棚中。 现在告诉你每个牛棚的高度限制和每头奶牛的高度，求满足条件的安排方案数。 解法明显满足乘法原理。   我们先把高度大的奶牛安排了，才能去安排小的，所以一开始先从大到小排序。设第 $i$ 个奶牛可以入住的牛棚数量为 $S">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-01-01T08:46:00.000Z">
-<meta property="article:modified_time" content="2025-01-01T09:01:51.224Z">
+<meta property="article:published_time" content="2025-01-04T06:37:00.000Z">
+<meta property="article:modified_time" content="2025-01-04T06:40:29.404Z">
 <meta property="article:author" content="HJZhao">
+<meta property="article:tag" content="贪心">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2414,7 +2415,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/21039.html">
+  <link itemprop="mainEntityOfPage" href="https://china-hjz.github.io/posts/59463.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="HJZhao">
   </span>
@@ -2435,7 +2436,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        建站日
+        P9942 [USACO21JAN] Just Stalling B 题解
       </h1>
       <div class='new-meta-box'>
         
@@ -2452,14 +2453,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E9%A2%98%E8%A7%A3/" itemprop="url"><span itemprop="name">题解</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-01T16:46:00+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-04T14:37:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jan 1, 2025</p>
+    <p>发布于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2482,7 +2493,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>历经九九八十一难，这个Blog终于算是可以了，在元旦正式打开</p>
+    <p><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/2561">GMOJ</a><br><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P9942">洛谷</a></p>
+<h3 id="大意"><a href="#大意" class="headerlink" title="大意"></a>大意</h3><p>$FJ$ 有 $N$ 头奶牛，给你第 $i$ 头奶牛的高度，现在要把它们安排到 $N$ 个牛棚中，每个牛棚有高度限制，高度大于这个限制的奶牛不能被安排到这个牛棚中。</p>
+<p>现在告诉你每个牛棚的高度限制和每头奶牛的高度，求满足条件的安排方案数。</p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><p>明显满足乘法原理。  </p>
+<p>我们先把高度大的奶牛安排了，才能去安排小的，所以一开始先从大到小排序。设第 $i$ 个奶牛可以入住的牛棚数量为 $S_i$（不考虑别的奶牛），每个奶牛实际可以选择的牛棚 $T_i$ 为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">T_i=S_i-t</span><br></pre></td></tr></table></figure>
+
+<p>$t$ 为之前已经安排的奶牛的数量。</p>
+<p>那么答案 $ans$ 为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ans=\prod_&#123;i=1&#125;^NT_i</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,a[<span class="number">100</span>],b[<span class="number">100</span>],c[<span class="number">100</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i) cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i) cin &gt;&gt; b[i];</span><br><span class="line">	<span class="built_in">sort</span>(a<span class="number">+1</span>,a+n<span class="number">+1</span>);</span><br><span class="line">	<span class="type">bool</span> f=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span> ; j &lt;= n ; ++j)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i]&lt;=b[j]) c[i]++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (c[i]) f=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (f)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="number">0</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">long</span> <span class="type">long</span> ans=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		ans*=c[n-i<span class="number">+1</span>]-i<span class="number">+1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
   </div>
   
@@ -2507,10 +2529,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-01T17:01:51+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-04T14:40:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jan 1, 2025</p>
+    <p>更新于：Jan 4, 2025</p>
   </a>
 </div>
 
@@ -2518,6 +2540,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%B4%AA%E5%BF%83/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>贪心</p></a></div>
+  <span hidden itemprop="keywords">贪心</span>
+
 
         
       
@@ -2529,7 +2555,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://china-hjz.github.io/posts/59463.html&title=P9942 [USACO21JAN] Just Stalling B 题解 - HJZhao&summary="
           
           >
           
@@ -2541,7 +2567,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://china-hjz.github.io/posts/59463.html&title=P9942 [USACO21JAN] Just Stalling B 题解 - HJZhao&summary="
           
           >
           
@@ -2553,7 +2579,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/21039.html&title=建站日 - HJZhao&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://china-hjz.github.io/posts/59463.html&title=P9942 [USACO21JAN] Just Stalling B 题解 - HJZhao&summary="
           
           >
           
@@ -2586,12 +2612,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/posts/42212.html'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>归并排序</p>
-          <p class='content'>归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
-好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort...</p>
-        </a>
       
+        <a class='next' href='/posts/24646.html'>
+          <p class='title'>P7411 [USACO21FEB] Comfortable Cows S 题解<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>GMOJ洛谷
+大意有一个矩阵 $T$， Farmer John 每轮会往 $T$ 矩阵中放一个牛，如果这牛旁边恰好有3头牛，则称这个牛是「舒适的」，求每轮 $T$ 矩阵中有多少个牛是「舒适的」。...</p>
+        </a>
       
     </div>
   
@@ -2606,7 +2632,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/posts/21039.html#comments">
+      <meta itemprop="discussionUrl" content="/posts/59463.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2638,9 +2664,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E6%84%8F"><span class="toc-text">大意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E6%B3%95"><span class="toc-text">解法</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3208,7 +3244,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/21039.html","name":"建站日"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"建站日","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/21039.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/21039.html","wordCount":0,"datePublished":"2025-01-01T08:46:00.000Z","dateModified":"2025-01-01T09:01:51.224Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","sameAs":["https://github.com/volantis-x"],"description":"HJZhao's Blog"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://China-hjz.github.io/","name":"HJZhao"}},{"@type":"ListItem","position":2,"item":{"@id":"https://China-hjz.github.io/categories/题解/","name":"题解"}},{"@type":"ListItem","position":3,"item":{"@id":"https://China-hjz.github.io/posts/59463.html","name":"P9942 [USACO21JAN] Just Stalling B 题解"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"HJZhao","url":"https://China-hjz.github.io/","keywords":null,"description":"HJZhao's Blog","author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/","description":"HJZhao's Blog"},"publisher":{"@type":"Organization","name":"HJZhao","url":"https://China-hjz.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://China-hjz.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"P9942 [USACO21JAN] Just Stalling B 题解","description":"HJZhao's Blog","inLanguage":"cn","mainEntityOfPage":{"@type":"WebPage","@id":"https://china-hjz.github.io/posts/59463.html"},"author":{"@type":"Person","name":"HJZhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://China-hjz.github.io/"},"publisher":{"@type":"Organization","name":"HJZhao","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://china-hjz.github.io/posts/59463.html","wordCount":0,"datePublished":"2025-01-04T06:37:00.000Z","dateModified":"2025-01-04T06:40:29.404Z","articleSection":"题解","keywords":"贪心","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
