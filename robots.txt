@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://china-hjz.github.io/sitemap.xml
