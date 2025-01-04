@@ -42,7 +42,7 @@
 <meta property="og:title" content="NOI2001 食物链题解（种类并查集）">
 <meta property="og:url" content="https://china-hjz.github.io/posts/28477.html">
 <meta property="og:site_name" content="HJZhao">
-<meta property="og:description" content="题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373   大意有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。   思路这题要用到一种特殊的并查集：种类并查集。这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有共同祖先">
+<meta property="og:description" content="题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373 大意 有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。 思路 这题要用到一种特殊的并查集：种类并查集。 这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。  这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有共同祖">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-04T06:20:00.000Z">
@@ -1583,9 +1583,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1613,9 +1613,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1735973657498),
+    lastupdate: new Date(1735974295033),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2493,10 +2493,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>题目传送门：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2024">洛谷P2024</a> &amp;&amp; <a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1373">gmoj初中1373</a>  </p>
-<h4 id="大意"><a href="#大意" class="headerlink" title="大意"></a>大意</h4><p>有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。  </p>
-<h4 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h4><p>这题要用到一种特殊的并查集：种类并查集。<br>这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。<br><img src="https://cdn.luogu.com.cn/upload/image_hosting/cucvmlwz.png" class="lazyload" data-srcset="https://cdn.luogu.com.cn/upload/image_hosting/cucvmlwz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有共同祖先的话，说明它和那个动物是同类。<br>如果一个动物和下一个群系的另一个动物有共同祖先，说明它吃那个动物。<br>如果一个动物和上一个群系的另一个动物有共同祖先，说明它被那个动物吃。  </p>
-<p>利用这个规律，我们就可以判断话是否为真了，只需要记住这三点  </p>
+    <p>题目传送门：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2024">洛谷P2024</a> &amp;&amp; <a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1373">gmoj初中1373</a></p>
+<h4 id="大意">大意</h4>
+<p>有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。</p>
+<h4 id="思路">思路</h4>
+<p>这题要用到一种特殊的并查集：种类并查集。<br>
+这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。<br>
+<img src="https://cdn.luogu.com.cn/upload/image_hosting/cucvmlwz.png" class="lazyload" data-srcset="https://cdn.luogu.com.cn/upload/image_hosting/cucvmlwz.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""><br>
+这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有共同祖先的话，说明它和那个动物是同类。<br>
+如果一个动物和下一个群系的另一个动物有共同祖先，说明它吃那个动物。<br>
+如果一个动物和上一个群系的另一个动物有共同祖先，说明它被那个动物吃。</p>
+<p>利用这个规律，我们就可以判断话是否为真了，只需要记住这三点</p>
 <ul>
 <li>如果Y吃X，那么X就不可能吃Y</li>
 <li>如果Y吃X，那么X就不可能和Y是同类</li>
@@ -2504,14 +2511,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>再加上题目说的</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1） 当前的话与前面的某些真的话冲突，就是假话；</span><br><span class="line"></span><br><span class="line">2） 当前的话中X或Y比N大，就是假话；</span><br><span class="line"></span><br><span class="line">3） 当前的话表示X吃X，就是假话。</span><br></pre></td></tr></table></figure>
-<p>就可以判断是否是假话了。如果不是假话，再判断是否是X吃Y，还是X和Y是同类。<br>如果X吃Y，就把X和下一个群系的Y连起来，表示X吃Y。（A、B、C都要！！）<br>如果X和Y是同类，就把X和当前群系的Y连起来，表示X和Y是同类。（A、B、C都要！！）  </p>
+<p>就可以判断是否是假话了。如果不是假话，再判断是否是X吃Y，还是X和Y是同类。<br>
+如果X吃Y，就把X和下一个群系的Y连起来，表示X吃Y。（A、B、C都要！！）<br>
+如果X和Y是同类，就把X和当前群系的Y连起来，表示X和Y是同类。（A、B、C都要！！）</p>
 <p>代码如下</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> f[<span class="number">150001</span>],ans=<span class="number">0</span>,n,m,x,y,z;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (f[x]==x) <span class="keyword">return</span> x;</span><br><span class="line">	<span class="keyword">return</span> f[x]=<span class="built_in">find</span>(f[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">merge</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	f[<span class="built_in">find</span>(x)]=<span class="built_in">find</span>(y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt;= <span class="number">150000</span> ; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		f[i]=i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; m ; ++i)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; z &gt;&gt; x &gt;&gt; y;</span><br><span class="line">		<span class="keyword">if</span> (x &gt; n || y &gt; n) ans++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (z == <span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">find</span>(x)==<span class="built_in">find</span>(y) || <span class="built_in">find</span>(x+n)==<span class="built_in">find</span>(y+n) || <span class="built_in">find</span>(x+n*<span class="number">2</span>)==<span class="built_in">find</span>(y+n*<span class="number">2</span>) || <span class="built_in">find</span>(x)==<span class="built_in">find</span>(y+n*<span class="number">2</span>) || <span class="built_in">find</span>(x+n)==<span class="built_in">find</span>(y) || <span class="built_in">find</span>(x+n*<span class="number">2</span>)==<span class="built_in">find</span>(y+n)) &#123;ans++;<span class="keyword">continue</span>;&#125;</span><br><span class="line">			<span class="built_in">merge</span>(x,y+n);</span><br><span class="line">			<span class="built_in">merge</span>(x+n,y+n*<span class="number">2</span>);</span><br><span class="line">			<span class="built_in">merge</span>(x+n*<span class="number">2</span>,y);</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (z == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">find</span>(x)==<span class="built_in">find</span>(y+n) || <span class="built_in">find</span>(x+n)==<span class="built_in">find</span>(y+n*<span class="number">2</span>) || <span class="built_in">find</span>(x+n*<span class="number">2</span>)==<span class="built_in">find</span>(y) || <span class="built_in">find</span>(x)==<span class="built_in">find</span>(y+n*<span class="number">2</span>) || <span class="built_in">find</span>(x+n)==<span class="built_in">find</span>(y) || <span class="built_in">find</span>(x+n*<span class="number">2</span>)==<span class="built_in">find</span>(y+n)) &#123;ans++;<span class="keyword">continue</span>;&#125;</span><br><span class="line">			<span class="built_in">merge</span>(x,y);</span><br><span class="line">			<span class="built_in">merge</span>(x+n,y+n);</span><br><span class="line">			<span class="built_in">merge</span>(x+n*<span class="number">2</span>,y+n*<span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt;endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="其他例题"><a href="#其他例题" class="headerlink" title="其他例题"></a>其他例题</h4><ul>
+<h4 id="其他例题">其他例题</h4>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/241/">AcWing【带权并查集】奇偶游戏</a></li>
 </ul>
-<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h4><p>并查集数组记得开三倍！！！</p>
+<h4 id="写在最后">写在最后</h4>
+<p>并查集数组记得开三倍！！！</p>
 
   </div>
   
@@ -2626,15 +2636,17 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 洛谷
 GMOJ
 
-大意给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。
-解法先把每头牛的年龄相差算出来，再用类似宽搜的办法...</p>
+大意
+给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。
+解法
+先把每头牛的年龄相差算出来，再用类似宽搜的...</p>
         </a>
       
       
         <a class='next' href='/posts/57123.html'>
           <p class='title'>线段树笔记<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。  
-既然是分治，那么，一个递归操作就包...</p>
+          <p class='content'>线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。
+既然是分治，那么，一个递归操作就包含结...</p>
         </a>
       
     </div>
@@ -2798,21 +2810,21 @@ GMOJ
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次&lt;/span&gt; <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人&lt;/span&gt;</p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       

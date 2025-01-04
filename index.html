@@ -1580,9 +1580,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1610,9 +1610,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1735973657498),
+    lastupdate: new Date(1735974295033),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2464,11 +2464,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        GMOJ洛谷
-大意$FJ$ 有 $N$ 头奶牛，给你第 $i$ 头奶牛的高度，现在要把它们安排到 $N$ 个牛棚中，每个牛棚有高度限制，高度大于这个限制的奶牛不能被安排到这个牛棚中。
+        GMOJ
+洛谷
+大意
+FJFJFJ 有 NNN 头奶牛，给你第 iii 头奶牛的高度，现在要把它们安排到 NNN 个牛棚中，每个牛棚有高度限制，高度大于这个限制的奶牛不能被安排到这个牛棚中。
 现在告诉你每个牛棚的高度限制和每头奶牛的高度，求满足条件的安排方案数。
-解法明显满足乘法原理。  
-我们先把高度大的奶牛安排了，才能去安排小的，所以一开始先从大到小排序。设第 $i$ 个奶牛可以入住的牛棚数量为...
+解法
+明显满足乘法原理。
+我们先把高度大的奶牛安排了，才能去安排小的，所以一开始先从大到小排序。设第 iii 个奶牛可以入住的牛棚...
       
     
   </div>
@@ -2490,7 +2493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/posts/59463.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2531,9 +2534,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        GMOJ洛谷
-大意有一个矩阵 $T$， Farmer John 每轮会往 $T$ 矩阵中放一个牛，如果这牛旁边恰好有3头牛，则称这个牛是「舒适的」，求每轮 $T$ 矩阵中有多少个牛是「舒适的」。
-解法用一个二维数组 $B$ 记录这个位置旁有多少头牛，每次添加牛时把四周的位置的 $B$ 值加一，然后判断这个位置是否是「舒适的」，如果是，则 $ans$ 加一；如果是4，$ans$ 就减一，如果自...
+        GMOJ
+洛谷
+大意
+有一个矩阵 TTT， Farmer John 每轮会往 TTT 矩阵中放一个牛，如果这牛旁边恰好有3头牛，则称这个牛是「舒适的」，求每轮 TTT 矩阵中有多少个牛是「舒适的」。
+解法
+用一个二维数组 BBB 记录这个位置旁有多少头牛，每次添加牛时把四周的位置的 BBB 值加一，然后判断这个位置是否是「舒适的」，如果是，则 ansansans 加一；如果是4，ansans...
       
     
   </div>
@@ -2555,7 +2561,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div>
           <a class='readmore' href='/posts/24646.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2601,9 +2607,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 洛谷
 GMOJ
 
-大意给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。
-解法先把每头牛的年龄相差算出来，再用类似宽搜的办法算出即可
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152...
+大意
+给出 Farmer John 的农场里每一头牛年龄的关系，求 Bessie 和 Elsie 的年龄相差多少。
+解法
+先把每头牛的年龄相差算出来，再用类似宽搜的办法算出即可
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051...
       
     
   </div>
@@ -2625,7 +2633,7 @@ GMOJ
       
         <div>
           <a class='readmore' href='/posts/8295.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2666,9 +2674,14 @@ GMOJ
   <div class='md article-desc' itemprop="articleBody">
     
       
-        题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373  
-大意有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。  
-思路这题要用到一种特殊的并查集：种类并查集。这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有共...
+        题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373
+大意
+有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少。
+思路
+这题要用到一种特殊的并查集：种类并查集。
+这种并查集分为多个序列，在本题为ABC三个序列，分别为3个种类的动物。
+
+这种方法处理方式也是很奇怪，即如果一个动物和自己群系的另一个动物（序列）有...
       
     
   </div>
@@ -2690,7 +2703,7 @@ GMOJ
       
         <div>
           <a class='readmore' href='/posts/28477.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2731,13 +2744,13 @@ GMOJ
   <div class='md article-desc' itemprop="articleBody">
     
       
-        线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。  
-既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。  
-一个最基本的的线段树会包含以下几个函数👇  
+        线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。
+既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。
+一个最基本的的线段树会包含以下几个函数👇
 
-build() ———— 用于建树   
-modify() ——— 用于修改单点元素  
-query()...
+build() ———— 用于建树
+modify() ——— 用于修改单点元素
+query() ——— 用于咨询区间...
       
     
   </div>
@@ -2759,7 +2772,7 @@ query()...
       
         <div>
           <a class='readmore' href='/posts/57123.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2800,14 +2813,18 @@ query()...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
-好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort的老师需要手打排序的情况下  
+        归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。
+好处
+复杂度相对会比快排快一点，也比快排好打
+特别是对于不让用Sort的老师需要手打排序的情况下
 步骤如下：
-把长度为n的数组递归分为n段 （分）  
-两两和并，每次取两个子序列开头小的数放在一个新序列里 （治）  
+
+把长度为n的数组递归分为n段 （分）
+两两和并，每次取两个子序列开头小的数放在一个新序列里 （治）
 把新序列覆盖到旧序列
 
-The code the...
+The code there:
+1...
       
     
   </div>
@@ -2829,7 +2846,7 @@ The code the...
       
         <div>
           <a class='readmore' href='/posts/42212.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2885,7 +2902,7 @@ The code the...
       
         <div>
           <a class='readmore' href='/posts/21039.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2927,7 +2944,7 @@ The code the...
           <h2>HJZhao</h2>
         
         
-          <p>—————————An OIer—————————</p>
+          <p>------------------An OIer------------------</p>
 
         
         
@@ -3135,21 +3152,21 @@ The code the...
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次&lt;/span&gt; <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人&lt;/span&gt;</p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       

@@ -34,7 +34,7 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Category: 算法笔记 - HJZhao</title>
+  <title>分类：算法笔记 - HJZhao</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="HJZhao's Blog - HJZhao - HJZhao">
   
@@ -1580,9 +1580,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1610,9 +1610,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1627,7 +1627,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1735973657498),
+    lastupdate: new Date(1735974295033),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2456,13 +2456,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。  
-既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。  
-一个最基本的的线段树会包含以下几个函数👇  
+        线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。
+既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。
+一个最基本的的线段树会包含以下几个函数👇
 
-build() ———— 用于建树   
-modify() ——— 用于修改单点元素  
-query()...
+build() ———— 用于建树
+modify() ——— 用于修改单点元素
+query() ——— 用于咨询区间...
       
     
   </div>
@@ -2484,7 +2484,7 @@ query()...
       
         <div>
           <a class='readmore' href='/posts/57123.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2525,14 +2525,18 @@ query()...
   <div class='md article-desc' itemprop="articleBody">
     
       
-        归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
-好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort的老师需要手打排序的情况下  
+        归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。
+好处
+复杂度相对会比快排快一点，也比快排好打
+特别是对于不让用Sort的老师需要手打排序的情况下
 步骤如下：
-把长度为n的数组递归分为n段 （分）  
-两两和并，每次取两个子序列开头小的数放在一个新序列里 （治）  
+
+把长度为n的数组递归分为n段 （分）
+两两和并，每次取两个子序列开头小的数放在一个新序列里 （治）
 把新序列覆盖到旧序列
 
-The code the...
+The code there:
+1...
       
     
   </div>
@@ -2554,7 +2558,7 @@ The code the...
       
         <div>
           <a class='readmore' href='/posts/42212.html' itemprop="url">
-            Read More
+            阅读全文
           </a>
         </div>
       
@@ -2598,7 +2602,7 @@ The code the...
           <h2>HJZhao</h2>
         
         
-          <p>—————————An OIer—————————</p>
+          <p>------------------An OIer------------------</p>
 
         
         
@@ -2805,21 +2809,21 @@ The code the...
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次&lt;/span&gt; <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人&lt;/span&gt;</p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       

@@ -42,7 +42,7 @@
 <meta property="og:title" content="线段树笔记">
 <meta property="og:url" content="https://china-hjz.github.io/posts/57123.html">
 <meta property="og:site_name" content="HJZhao">
-<meta property="og:description" content="线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。   既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。   一个最基本的的线段树会包含以下几个函数👇    build() ———— 用于建树    modify() ——— 用于修改单点元素   query() ——">
+<meta property="og:description" content="线段树 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。 既然是分治，那么，一个递归操作就包含结束条件、分别递归和合并处理三个部分。 一个最基本的的线段树会包含以下几个函数👇  build() ———— 用于建树 modify() ——— 用于修改单点元素 query() ——— 用于咨询区间元素">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2025-01-04T06:07:00.000Z">
@@ -1583,9 +1583,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
-        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+        `<span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>`+
+        `<span class="kill-c">微软已经于2016年终止了对 Internet Explorer (IE) 10 及更早版本的支持，<br/>继续使用存在极大的安全隐患，请使用当代主流的浏览器进行访问。</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解详情 ></strong></a>`+
     '</div>');
 </script>
 
@@ -1613,9 +1613,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
-        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+        <span class="kill-t"><b>抱歉，您的浏览器无法访问本站</b></span><br/>
+        <span class="kill-c">本页面需要浏览器支持（启用）JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解详情 ></strong></a>
     </div>
 </noscript>
 
@@ -1630,7 +1630,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1735973657498),
+    lastupdate: new Date(1735974295033),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2493,25 +2493,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p><a target="_blank" rel="noopener" href="https://oi-wiki.org/ds/seg/">线段树</a> 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。  </p>
-<p>既然是分治，那么，一个递归操作就包含<code>结束条件</code>、<code>分别递归</code>和<code>合并处理</code>三个部分。  </p>
-<p>一个<strong>最基本的</strong>的线段树会包含以下几个函数👇  </p>
+    <p><a target="_blank" rel="noopener" href="https://oi-wiki.org/ds/seg/">线段树</a> 是用于解决区间问题的一种数据结构，用了分治思想。顾名思义“线段树”，它的每个点都是一段线段，维护着一个数组区间。线段树咨询速度很快，修改也很方便。</p>
+<p>既然是分治，那么，一个递归操作就包含<code>结束条件</code>、<code>分别递归</code>和<code>合并处理</code>三个部分。</p>
+<p>一个<strong>最基本的</strong>的线段树会包含以下几个函数👇</p>
 <ol>
-<li>build() ———— 用于建树   </li>
-<li>modify() ——— 用于修改单点元素  </li>
+<li>build() ———— 用于建树</li>
+<li>modify() ——— 用于修改单点元素</li>
 <li>query() ——— 用于咨询区间元素</li>
 </ol>
-<p>而且，<code>tree[x]</code>一般表示为x节点的区间值（比如区间最大值，区间和之类的），并不需要存储区间开头或结尾。  </p>
-<p>除此之外，还有区间修改，一般常用的有<code>懒惰标记</code>和<code>标记永久化</code>两个方法。<code>懒惰标记</code>的方法实现需要一个<strong>额外</strong>的<code>lazy</code>数组，用来标记操作。与单点修改不同的是，<code>懒惰标记</code>不需要递归到底层，只需要在包含的修改区间标记一下，如果别的操作遍历过这个节点，再<strong>顺便</strong>把标记应用到子节点（一般为push_down()函数）。<code>懒惰标记</code>的核心思想是：不使用就不会应用（到子节点）<del>真懒</del>。大大减少了时间复杂度，一般最坏时间复杂度为O(log n) 。<del>可能吧</del></p>
+<p>而且，<code>tree[x]</code>一般表示为x节点的区间值（比如区间最大值，区间和之类的），并不需要存储区间开头或结尾。</p>
+<p>除此之外，还有区间修改，一般常用的有<code>懒惰标记</code>和<code>标记永久化</code>两个方法。<code>懒惰标记</code>的方法实现需要一个<strong>额外</strong>的<code>lazy</code>数组，用来标记操作。与单点修改不同的是，<code>懒惰标记</code>不需要递归到底层，只需要在包含的修改区间标记一下，如果别的操作遍历过这个节点，再<strong>顺便</strong>把标记应用到子节点（一般为push_down()函数）。<code>懒惰标记</code>的核心思想是：不使用就不会应用（到子节点）<s>真懒</s>。大大减少了时间复杂度，一般最坏时间复杂度为O(log n) 。<s>可能吧</s></p>
 <p>线段树用于解决区间问题，比如区间最大值，区间和之类的，还有 <a target="_blank" rel="noopener" href="https://oiwiki.com/topic/rmq/">RMQ</a> 问题。</p>
 <p>不说了，上代码：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="comment">//#define max(a,b) (a&gt;b?a:b)</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="comment">//struct linetree</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="type">int</span> a[<span class="number">1000000</span>],t[<span class="number">1000000</span>],lazy[<span class="number">1000000</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r)</span><br><span class="line">	&#123;</span><br><span class="line">		t[x]=a[l]; </span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="built_in">build</span>(l,mid,x*<span class="number">2</span>);</span><br><span class="line">	<span class="built_in">build</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span><span class="number">+1</span>],t[x*<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">push_down</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//	t[x]+=lazy[x];</span></span><br><span class="line">	lazy[x*<span class="number">2</span>]+=lazy[x];</span><br><span class="line">	t[x*<span class="number">2</span>]+=lazy[x];</span><br><span class="line">	lazy[x*<span class="number">2</span><span class="number">+1</span>]+=lazy[x];</span><br><span class="line">	t[x*<span class="number">2</span><span class="number">+1</span>]+=lazy[x];</span><br><span class="line">	lazy[x]=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> L, <span class="type">int</span> R)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="keyword">if</span> (l &gt; R || r &lt; L) <span class="keyword">return</span> <span class="number">-0x7fffffff</span>;</span><br><span class="line"><span class="comment">//	if (l == r) return t[x];</span></span><br><span class="line">	<span class="keyword">if</span> (L &lt;= l &amp;&amp; r &lt;= R) <span class="keyword">return</span> t[x];</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>,ans=<span class="number">-2000000000</span>;</span><br><span class="line">	</span><br><span class="line">	ans=<span class="built_in">max</span>(ans,<span class="built_in">query</span>(l,mid,x*<span class="number">2</span>,L,R));</span><br><span class="line">	ans=<span class="built_in">max</span>(ans,<span class="built_in">query</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,L,R));</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modify</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> T, <span class="type">int</span> v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l==r) </span><br><span class="line">	&#123;</span><br><span class="line">		a[T]=v;</span><br><span class="line">		t[x]=v;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="keyword">if</span> (T &lt;= mid) <span class="built_in">modify</span>(l,mid,x*<span class="number">2</span>,T,v);</span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">modify</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,T,v);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span><span class="number">+1</span>],t[x*<span class="number">2</span>]);</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">modifymax</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r, <span class="type">int</span> x, <span class="type">int</span> L, <span class="type">int</span> R, <span class="type">int</span> value)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (l &gt;= L &amp;&amp; r &lt;= R)</span><br><span class="line">	&#123;</span><br><span class="line">		lazy[x]+=value;</span><br><span class="line">		t[x]+=value;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//	if (l &gt; R || r &lt; L) return;</span></span><br><span class="line">	<span class="keyword">if</span> (lazy[x]) <span class="built_in">push_down</span>(x);</span><br><span class="line">	<span class="type">int</span> mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">	<span class="keyword">if</span> (L &lt;= mid)<span class="built_in">modifymax</span>(l,mid,x*<span class="number">2</span>,L,R,value);</span><br><span class="line">	<span class="keyword">if</span> (R &gt; mid) <span class="built_in">modifymax</span>(mid<span class="number">+1</span>,r,x*<span class="number">2</span><span class="number">+1</span>,L,R,value);</span><br><span class="line">	t[x]=<span class="built_in">max</span>(t[x*<span class="number">2</span>],t[x*<span class="number">2</span><span class="number">+1</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//&#125;;</span></span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n,m,x,y,z;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span> ; i &lt;= n ; ++i) <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;a[i]);</span><br><span class="line">	<span class="built_in">build</span>(<span class="number">1</span>,n,<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;m);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span> ; i &lt; m ; ++i) </span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;x);</span><br><span class="line">		<span class="keyword">if</span> (x == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld%lld&quot;</span>,&amp;x,&amp;y,&amp;z);</span><br><span class="line">			<span class="built_in">modifymax</span>(<span class="number">1</span>,n,<span class="number">1</span>,x,y,z);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">&quot;%lld%lld&quot;</span>,&amp;x,&amp;y);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%lld\n&quot;</span>,<span class="built_in">query</span>(<span class="number">1</span>,n,<span class="number">1</span>,x,y));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h5><p>一些GMOJ上的例题：  </p>
+<h5 id="其他">其他</h5>
+<p>一些GMOJ上的例题：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1380">【线段树】最大值（新版）</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547063">代码</a></li>
-<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1379">【线段树】最大值</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/546768">代码</a></li>
-<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/2262">维护序列（seq）</a><br><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547521">代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1380">【线段树】最大值（新版）</a><br>
+<a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547063">代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/1379">【线段树】最大值</a><br>
+<a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/546768">代码</a></li>
+<li><a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/show/2262">维护序列（seq）</a><br>
+<a target="_blank" rel="noopener" href="https://gmoj.net/junior/#main/code/547521">代码</a></li>
 </ul>
 
   </div>
@@ -2622,15 +2625,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/posts/28477.html'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>NOI2001 食物链题解（种类并查集）</p>
-          <p class='content'>题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373  
-大意有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多...</p>
+          <p class='content'>题目传送门：洛谷P2024 &amp;&amp; gmoj初中1373
+大意
+有三种动物分别为A，B，C，关系是：A吃B，B吃C，C吃A。给出K句话，表示每个动物的具体关系，问不成立的关系有多少...</p>
         </a>
       
       
         <a class='next' href='/posts/42212.html'>
           <p class='title'>归并排序<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。  
-好处复杂度相对会比快排快一点，也比快排好打特别是对于不让用Sort...</p>
+          <p class='content'>归并排序 是一种基于分治思想的排序算法。分治，即分而治之。主要原理是先把一个大问题分解为多个小问题，再分别处理，最后合并。
+好处
+复杂度相对会比快排快一点，也比快排好打
+特别是对于不让用Sort...</p>
         </a>
       
     </div>
@@ -2794,21 +2800,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     
       
-        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+        <div><p>博客内容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
       
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次&lt;/span&gt; <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人&lt;/span&gt;</p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
-        Use
+        本站使用
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        as theme
+        作为主题
       
     
       
