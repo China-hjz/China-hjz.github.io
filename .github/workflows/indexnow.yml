@@ -3,7 +3,7 @@ name: Submit IndexNow Request To Bing
 on:
   push:
     branches: ["main"]  # 根据需要替换为你的主分支
-  workflow_dispatch: true # 允许手动触发工作流
+  workflow_dispatch:  # 允许手动触发工作流
 
 jobs:
   indexnow:
