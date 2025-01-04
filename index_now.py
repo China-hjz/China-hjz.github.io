@@ -2,7 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 HOST = "china-hjz.github.io"  # 替换为你的实际域名
-KEY = "d153551697ef4d63ad84b35fbf0c3d44"  # 替换为你的 API Key
+KEY = "8b66e3989d714dccb2bcd4b138254069"  # 替换为你的 API Key
 
 def get_latest_posts(sitemap_path, n=10):
     # 解析 XML sitemap
@@ -51,10 +51,3 @@ if __name__ == "__main__":
     print("响应状态码：", response.status_code)  # 打印响应状态
     print("响应内容：", response.text)  # 打印响应内容
 
-/** 转载请注明出处！
-   本博客除特别声明外，均采用「[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)」许可协议。
-—— 本文作者：4rozeN
-—— 原文标题：Hexo 博客配置 GitHub Actions 推送 indexnow
-—— 原文链接：https://4rozen.github.io/archives/Hexo/7648.html
-—— 原文字数：1.1k 字
-*/
