@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bing每日图片</title>
+    <style>
+        /* 保持原有样式不变 */
+        body { /* 同上 */ }
+        #imageContainer { /* 同上 */ }
+        #bingImage { /* 同上 */ }
+    </style>
+</head>
+<body>
+    <div id="imageContainer">
+        <!-- 图片将在这里显示 -->
+    </div>
+
+    <script>
+        // 方案1：使用JSONP跨域方案
+        function handleBingData(data) {
+            try {
+                // 从JSON数据中提取图片路径
+                const imageUrl = 'https://bing.com' + data.images[0].url;
+                
+                // 创建并显示图片
+                const img = document.createElement('img');
+                img.id = 'bingImage';
+                img.src = imageUrl;
+                img.alt = 'Bing每日图片';
+                
+                document.getElementById('imageContainer').appendChild(img);
+            } catch (error) {
+                console.error('解析数据时出错:', error);
+                alert('无法加载图片，请稍后重试');
+            }
+        }
+
+        // 创建JSONP请求
+        const script = document.createElement('script');
+        script.src = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US&callback=handleBingData';
+        document.head.appendChild(script);
+
+        // 方案2：使用CORS代理（备选方案）
+        /*
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        const targetUrl = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US';
+        
+        fetch(proxyUrl + targetUrl)
+            .then(response => response.json())
+            .then(data => {
+                const imageUrl = 'https://bing.com' + data.images[0].url;
+                // 显示图片逻辑同上
+            })
+            .catch(error => {
+                console.error('请求失败:', error);
+                alert('无法获取图片数据');
+            });
+        */
+    </script>
+</body>
+</html>
