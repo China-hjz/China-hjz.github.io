@@ -1,3 +1,6 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
 <?php
 $url = "https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=zh-CN";
 $curl = curl_init($url);
@@ -26,3 +29,5 @@ if ($imgurl) {
     exit('error');
 }
 ?>
+</body> 
+</html>
