@@ -240,4 +240,36 @@ M1001 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">�
         <tag>线段树</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ABC398 A-D 题解</title>
+    <url>/posts/52602.html</url>
+    <content><![CDATA[<h2 id="A-Doors-in-the-Center">A - Doors in the Center</h2>
+<p>不用说了吧</p>
+<p><a class="link"   href="https://atcoder.jp/contests/abc398/submissions/64026027" >Code<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="B-Full-House-3">B - Full House 3</h2>
+<p>大意：给出7个数，求子序列 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>x</mi><mo separator="true">,</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>y</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[x,x,y,y,y]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">]</span></span></span></span></p>
+<p>这题真是太坑了,卡了我三发罚时</p>
+<p>除了要考虑要刚刚好满足的情况，还要考虑大于3或2的情况</p>
+<p>经典错误：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">bool</span> one=<span class="number">0</span>,two=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">loop</span>(i,<span class="number">7</span>) cin &gt;&gt; a[i], b[a[i]]++;</span><br><span class="line"><span class="built_in">loop</span>(i,<span class="number">13</span>) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (b[i]==<span class="number">2</span>) two=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (b[i]==<span class="number">3</span>) one=<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (two&amp;&amp;one) cout &lt;&lt; <span class="string">&quot;Yes&quot;</span> &lt;&lt; endl;</span><br><span class="line"><span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;No&quot;</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure></div>
+<p>正确答案：</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> one=<span class="number">0</span>,two=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">loop</span>(i,<span class="number">7</span>) cin &gt;&gt; a[i], b[a[i]]++;</span><br><span class="line"><span class="built_in">loop</span>(i,<span class="number">13</span>) </span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (b[i]==<span class="number">2</span>) two++;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (b[i]==<span class="number">3</span>) one++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (one&gt;=<span class="number">2</span>||two&amp;&amp;one) cout &lt;&lt; <span class="string">&quot;Yes&quot;</span> &lt;&lt; endl;</span><br><span class="line"><span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;No&quot;</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure></div>
+<p><a class="link"   href="https://atcoder.jp/contests/abc398/submissions/64056017" >Code<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="C-Uniqueness">C - Uniqueness</h2>
+<p>题意：在满足条件“其他 N−1 个人中没有人与自己拥有相同整数”的人中，找到拥有最大整数的那个人，并打印该人的标签。</p>
+<p>模拟即可，比B题简单，有一些细节注意一下</p>
+<p><a class="link"   href="https://atcoder.jp/contests/abc398/tasks/abc398_c" >Code<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h2 id="D-Uniqueness">D - Uniqueness</h2>
+<h3 id="大意">大意</h3>
+<p>有一个篝火和一个人（其中人不动），篝火每秒冒出一个烟，冒出的烟每秒全都向一个方向移动一格，问每秒人的格子有没有烟。</p>
+<h3 id="解法">解法</h3>
+<p>直接模拟烟太麻烦，所以反过来模拟篝火和人，每次篝火和人与烟的反方向移动，烟不动，就可以达到相对的效果</p>
+<p>烟的位置用 map 存</p>
+<p><a class="link"   href="https://atcoder.jp/contests/abc398/submissions/64075020" >Code<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>题解</category>
+        <category>ABC</category>
+      </categories>
+  </entry>
 </search>
